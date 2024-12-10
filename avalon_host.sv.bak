@@ -1,0 +1,56 @@
+module avalon_host (
+    input clk,
+    input rst_n,
+
+    // AXI Stream Input
+    input [127:0] s_axi_data,
+    input s_axi_valid,
+    input s_axi_last,
+
+    // Avalon-MM Output
+    output reg [31:0] avm_address,
+    output reg [31:0] avm_burstcount,
+    output reg        avm_read,
+    output reg [127:0] avm_readdata,
+    output reg [15:0]  avm_byteenable
+);
+
+    // FIFO memory
+    reg [127:0] fifo_mem [0:255]; 
+    reg [7:0]  wr_ptr = 0;
+    reg [7:0]  rd_ptr = 0;
+    reg [7:0]  fifo_count = 0;
+	 
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            wr_ptr <= 0;
+            rd_ptr <= 0;
+            fifo_count <= 0;
+            avm_read <= 0;
+            avm_burstcount <= 0;
+        end else begin
+            // AXI input data handling
+            if (s_axi_valid) begin
+                fifo_mem[wr_ptr] <= s_axi_data;
+                wr_ptr <= wr_ptr + 1;
+                fifo_count <= fifo_count + 1;
+            end
+
+            // Avalon-MM output logic
+            if (fifo_count > 0) begin
+                avm_read <= 1;
+                avm_burstcount <= 5; 
+                avm_address <= rd_ptr; 
+                avm_readdata <= fifo_mem[rd_ptr]; 
+                avm_byteenable <=16'h000f;
+                rd_ptr <= rd_ptr + 1;
+                fifo_count <= fifo_count - 1;
+            end else begin
+                avm_read <= 0;
+            end
+        end
+    end
+	
+	
+
+endmodule

@@ -1,0 +1,31 @@
+module counter(
+	input clk,
+	input areset,
+	input [7:0] n,
+	output [3:0] count
+	);
+	
+	// Internals
+	reg [3:0] ctr;
+	reg [7:0] counter;
+	
+	// Combinational block
+	always@ (posedge clk) begin		
+		if (~areset) begin
+			ctr<=0;
+			counter<=0;
+		end else begin
+			if (counter < n) begin;
+				ctr <= ctr + 1;
+				if (ctr == 4'hf) begin
+					counter = counter + 1;
+				end
+			end
+		end
+	end
+		
+	// Assignments 
+	assign count = ctr;
+	
+endmodule
+

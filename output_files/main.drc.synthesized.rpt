@@ -1,0 +1,380 @@
+Design Assistant report for main
+Thu Oct 10 09:51:58 2024
+Quartus Prime Version 22.4.0 Build 94 12/07/2022 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant (Synthesized) Results - 1 of 14 Rules Failed
+  3. RES-30134 - Registers Not Reachable from Reset Release IP
+  4. LNT-30011 - Design Contains Combinational Loops
+  5. RES-10202 - Register Power-Up Settings Conflict with Device Settings
+  6. LNT-30017 - Register Output Driving Its Own Asynchronous Control Signal Directly or Through Combinational Logic
+  7. LNT-30023 - Reset Nets with Polarity Conflict
+  8. RES-30132 - Registers May Not Be Properly Reset
+  9. RES-30133 - Embedded Memory Blocks with Initialized Content That Might be Modified Before the FPGA Enters User Mode
+ 10. TMC-20052 - Paths with Post Synthesis Inferred Latches
+ 11. FLP-10500 - Non Driving Top Level Inputs Found
+ 12. LNT-30010 - Nets Driving both Reset and Clock Enable Signals
+ 13. LNT-50006 - DSP Control Signal Registers Reset Mode Mismatch
+ 14. TMC-20053 - DSP Inputs Driven by High Fan-Out Net
+ 15. TMC-20500 - Hierarchical Tree Duplication was Shallower than Possible
+ 16. TMC-20501 - Hierarchical Tree Duplication was Shallower than Requested
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant (Synthesized) Results - 1 of 14 Rules Failed                                                                                                                          ;
++---------------------------------------------------------------------------------------------------------------------+----------+------------+--------+---------------------------------+
+; Rule                                                                                                                ; Severity ; Violations ; Waived ; Tags                            ;
++---------------------------------------------------------------------------------------------------------------------+----------+------------+--------+---------------------------------+
+; RES-30134 - Registers Not Reachable from Reset Release IP                                                           ; Medium   ; 178        ; 0      ; reset-usage, reset-reachability ;
+; LNT-30011 - Design Contains Combinational Loops                                                                     ; High     ; 0          ; 0      ; nonstandard-timing              ;
+; RES-10202 - Register Power-Up Settings Conflict with Device Settings                                                ; High     ; 0          ; 0      ; reset-usage                     ;
+; LNT-30017 - Register Output Driving Its Own Asynchronous Control Signal Directly or Through Combinational Logic     ; Medium   ; 0          ; 0      ; nonstandard-timing              ;
+; LNT-30023 - Reset Nets with Polarity Conflict                                                                       ; Medium   ; 0          ; 0      ; reset-usage                     ;
+; RES-30132 - Registers May Not Be Properly Reset                                                                     ; Medium   ; 0          ; 0      ; reset-usage, reset-reachability ;
+; RES-30133 - Embedded Memory Blocks with Initialized Content That Might be Modified Before the FPGA Enters User Mode ; Medium   ; 0          ; 0      ; ram, reset-usage                ;
+; TMC-20052 - Paths with Post Synthesis Inferred Latches                                                              ; Medium   ; 0          ; 0      ; nonstandard-timing, latch       ;
+; FLP-10500 - Non Driving Top Level Inputs Found                                                                      ; Low      ; 0          ; 0      ; system                          ;
+; LNT-30010 - Nets Driving both Reset and Clock Enable Signals                                                        ; Low      ; 0          ; 0      ; reset-usage                     ;
+; LNT-50006 - DSP Control Signal Registers Reset Mode Mismatch                                                        ; Low      ; 0          ; 0      ; dsp, reset-usage                ;
+; TMC-20053 - DSP Inputs Driven by High Fan-Out Net                                                                   ; Low      ; 0          ; 0      ; dsp                             ;
+; TMC-20500 - Hierarchical Tree Duplication was Shallower than Possible                                               ; Low      ; 0          ; 0      ; register-duplication, synthesis ;
+; TMC-20501 - Hierarchical Tree Duplication was Shallower than Requested                                              ; Low      ; 0          ; 0      ; register-duplication, synthesis ;
++---------------------------------------------------------------------------------------------------------------------+----------+------------+--------+---------------------------------+
+
+
+Status:		FAIL
+Severity:		Medium
+Number of violations: 	178
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------------+
+; RES-30134 - Registers Not Reachable from Reset Release IP ;
++----------------------+------------------------------------+
+; Register Node        ; Waived                             ;
++----------------------+------------------------------------+
+; dut|aval_ptr[7]      ;                                    ;
+; dut|avm_address[7]   ;                                    ;
+; counter|ctr[51]      ;                                    ;
+; counter|ctr[52]      ;                                    ;
+; counter|ctr[53]      ;                                    ;
+; counter|ctr[54]      ;                                    ;
+; counter|ctr[55]      ;                                    ;
+; counter|ctr[56]      ;                                    ;
+; counter|ctr[25]      ;                                    ;
+; counter|ctr[26]      ;                                    ;
+; counter|ctr[27]      ;                                    ;
+; counter|ctr[28]      ;                                    ;
+; dut|aval_ptr[2]      ;                                    ;
+; counter|ctr[29]      ;                                    ;
+; counter|ctr[30]      ;                                    ;
+; counter|ctr[31]      ;                                    ;
+; counter|ctr[32]      ;                                    ;
+; counter|ctr[33]      ;                                    ;
+; counter|ctr[34]      ;                                    ;
+; counter|ctr[35]      ;                                    ;
+; counter|ctr[36]      ;                                    ;
+; counter|ctr[37]      ;                                    ;
+; counter|ctr[38]      ;                                    ;
+; dut|avm_address[6]   ;                                    ;
+; counter|ctr[39]      ;                                    ;
+; counter|ctr[40]      ;                                    ;
+; counter|ctr[9]       ;                                    ;
+; counter|ctr[10]      ;                                    ;
+; counter|ctr[11]      ;                                    ;
+; counter|ctr[12]      ;                                    ;
+; counter|ctr[13]      ;                                    ;
+; counter|ctr[14]      ;                                    ;
+; counter|ctr[15]      ;                                    ;
+; counter|ctr[16]      ;                                    ;
+; dut|aval_ptr[1]      ;                                    ;
+; counter|ctr[17]      ;                                    ;
+; counter|ctr[18]      ;                                    ;
+; counter|ctr[19]      ;                                    ;
+; counter|ctr[20]      ;                                    ;
+; counter|ctr[21]      ;                                    ;
+; counter|ctr[22]      ;                                    ;
+; counter|ctr[23]      ;                                    ;
+; counter|ctr[24]      ;                                    ;
+; dut|rd_ptr[7]        ;                                    ;
+; dut|rd_ptr[6]        ;                                    ;
+; dut|avm_address[5]   ;                                    ;
+; dut|rd_ptr[5]        ;                                    ;
+; dut|rd_ptr[4]        ;                                    ;
+; dut|rd_ptr[3]        ;                                    ;
+; dut|rd_ptr[2]        ;                                    ;
+; dut|rd_ptr[1]        ;                                    ;
+; dut|rd_ptr[0]        ;                                    ;
+; counter|ctr[0]       ;                                    ;
+; counter|ctr[1]       ;                                    ;
+; counter|ctr[2]       ;                                    ;
+; counter|ctr[3]       ;                                    ;
+; dut|aval_ptr[0]      ;                                    ;
+; counter|ctr[4]       ;                                    ;
+; counter|ctr[5]       ;                                    ;
+; counter|ctr[6]       ;                                    ;
+; counter|ctr[7]       ;                                    ;
+; counter|ctr[8]       ;                                    ;
+; dut|wr_ptr[7]        ;                                    ;
+; dut|wr_ptr[6]        ;                                    ;
+; dut|wr_ptr[5]        ;                                    ;
+; dut|wr_ptr[4]        ;                                    ;
+; dut|wr_ptr[3]        ;                                    ;
+; dut|avm_address[4]   ;                                    ;
+; dut|wr_ptr[2]        ;                                    ;
+; dut|wr_ptr[1]        ;                                    ;
+; dut|wr_ptr[0]        ;                                    ;
+; dut|fifo_count[2]    ;                                    ;
+; dut|fifo_count[1]    ;                                    ;
+; dut|fifo_count[0]    ;                                    ;
+; dut|fifo_count[7]    ;                                    ;
+; dut|fifo_count[5]    ;                                    ;
+; dut|fifo_count[6]    ;                                    ;
+; dut|next_state.WRITE ;                                    ;
+; dut|avm_write        ;                                    ;
+; dut|next_state.READ  ;                                    ;
+; dut|next_state.RESET ;                                    ;
+; dut|state.RESET      ;                                    ;
+; dut|state.READ       ;                                    ;
+; dut|state.WRITE      ;                                    ;
+; dut|fifo_count[3]    ;                                    ;
+; counter|valid        ;                                    ;
+; dut|fifo_count[4]    ;                                    ;
+; dut|ready_out        ;                                    ;
+; dut|avm_read_0       ;                                    ;
+; counter|ctr[127]     ;                                    ;
+; dut|avm_address[11]  ;                                    ;
+; counter|ctr[126]     ;                                    ;
+; counter|ctr[125]     ;                                    ;
+; counter|ctr[124]     ;                                    ;
+; counter|ctr[123]     ;                                    ;
+; counter|ctr[122]     ;                                    ;
+; counter|ctr[121]     ;                                    ;
+; counter|ctr[105]     ;                                    ;
+; counter|ctr[106]     ;                                    ;
+; counter|ctr[107]     ;                                    ;
+; counter|ctr[108]     ;                                    ;
+; dut|aval_ptr[6]      ;                                    ;
+; counter|ctr[109]     ;                                    ;
+; counter|ctr[110]     ;                                    ;
+; counter|ctr[111]     ;                                    ;
+; counter|ctr[112]     ;                                    ;
+; counter|ctr[113]     ;                                    ;
+; counter|ctr[114]     ;                                    ;
+; counter|ctr[115]     ;                                    ;
+; counter|ctr[116]     ;                                    ;
+; counter|ctr[117]     ;                                    ;
+; counter|ctr[118]     ;                                    ;
+; dut|avm_address[10]  ;                                    ;
+; counter|ctr[119]     ;                                    ;
+; counter|ctr[120]     ;                                    ;
+; counter|ctr[89]      ;                                    ;
+; counter|ctr[90]      ;                                    ;
+; counter|ctr[91]      ;                                    ;
+; counter|ctr[92]      ;                                    ;
+; counter|ctr[93]      ;                                    ;
+; counter|ctr[94]      ;                                    ;
+; counter|ctr[95]      ;                                    ;
+; counter|ctr[96]      ;                                    ;
+; dut|aval_ptr[5]      ;                                    ;
+; counter|ctr[97]      ;                                    ;
+; counter|ctr[98]      ;                                    ;
+; counter|ctr[99]      ;                                    ;
+; counter|ctr[100]     ;                                    ;
+; counter|ctr[101]     ;                                    ;
+; counter|ctr[102]     ;                                    ;
+; counter|ctr[103]     ;                                    ;
+; counter|ctr[104]     ;                                    ;
+; counter|ctr[73]      ;                                    ;
+; counter|ctr[74]      ;                                    ;
+; dut|avm_address[9]   ;                                    ;
+; counter|ctr[75]      ;                                    ;
+; counter|ctr[76]      ;                                    ;
+; counter|ctr[77]      ;                                    ;
+; counter|ctr[78]      ;                                    ;
+; counter|ctr[79]      ;                                    ;
+; counter|ctr[80]      ;                                    ;
+; counter|ctr[81]      ;                                    ;
+; counter|ctr[82]      ;                                    ;
+; counter|ctr[83]      ;                                    ;
+; counter|ctr[84]      ;                                    ;
+; dut|aval_ptr[4]      ;                                    ;
+; counter|ctr[85]      ;                                    ;
+; counter|ctr[86]      ;                                    ;
+; counter|ctr[87]      ;                                    ;
+; counter|ctr[88]      ;                                    ;
+; counter|ctr[57]      ;                                    ;
+; counter|ctr[58]      ;                                    ;
+; counter|ctr[59]      ;                                    ;
+; counter|ctr[60]      ;                                    ;
+; counter|ctr[61]      ;                                    ;
+; counter|ctr[62]      ;                                    ;
+; dut|avm_address[8]   ;                                    ;
+; counter|ctr[63]      ;                                    ;
+; counter|ctr[64]      ;                                    ;
+; counter|ctr[65]      ;                                    ;
+; counter|ctr[66]      ;                                    ;
+; counter|ctr[67]      ;                                    ;
+; counter|ctr[68]      ;                                    ;
+; counter|ctr[69]      ;                                    ;
+; counter|ctr[70]      ;                                    ;
+; counter|ctr[71]      ;                                    ;
+; counter|ctr[72]      ;                                    ;
+; dut|aval_ptr[3]      ;                                    ;
+; counter|ctr[41]      ;                                    ;
+; counter|ctr[42]      ;                                    ;
+; counter|ctr[43]      ;                                    ;
+; counter|ctr[44]      ;                                    ;
+; counter|ctr[45]      ;                                    ;
+; counter|ctr[46]      ;                                    ;
+; counter|ctr[47]      ;                                    ;
+; counter|ctr[48]      ;                                    ;
+; counter|ctr[49]      ;                                    ;
+; counter|ctr[50]      ;                                    ;
++----------------------+------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------------+
+; LNT-30011 - Design Contains Combinational Loops ;
++-------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------------------------------+
+; RES-10202 - Register Power-Up Settings Conflict with Device Settings ;
++----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------------------------------------------------------------------+
+; LNT-30017 - Register Output Driving Its Own Asynchronous Control Signal Directly or Through Combinational Logic ;
++-----------------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------+
+; LNT-30023 - Reset Nets with Polarity Conflict ;
++-----------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------------+
+; RES-30132 - Registers May Not Be Properly Reset ;
++-------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		exclude_ram_blocks_without_mif = True
++---------------------------------------------------------------------------------------------------------------------+
+; RES-30133 - Embedded Memory Blocks with Initialized Content That Might be Modified Before the FPGA Enters User Mode ;
++---------------------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------+
+; TMC-20052 - Paths with Post Synthesis Inferred Latches ;
++--------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------+
+; FLP-10500 - Non Driving Top Level Inputs Found ;
++------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------+
+; LNT-30010 - Nets Driving both Reset and Clock Enable Signals ;
++--------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------+
+; LNT-50006 - DSP Control Signal Registers Reset Mode Mismatch ;
++--------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		DSP_High_Fanout_Net_Threshold = 500
++---------------------------------------------------+
+; TMC-20053 - DSP Inputs Driven by High Fan-Out Net ;
++---------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------------------------+
+; TMC-20500 - Hierarchical Tree Duplication was Shallower than Possible ;
++-----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------------------------------+
+; TMC-20501 - Hierarchical Tree Duplication was Shallower than Requested ;
++------------------------------------------------------------------------+
+
+

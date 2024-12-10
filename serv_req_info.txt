@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<internal_error>
+	<sub_system>ERR</sub_system>
+	<callstack>	0x7486606543c5: qcl_pll + 0x2c3c5 (_ZN14TCL_PARAMETERS28get_frequency_from_tcl_paramENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE + 0x15f)
+	0x74866069bdf3: qcl_pll + 0x73df3 (pll_legality_retrieve_output_clock_frequency_list + 0x5c4)
+	0x748627450fb7: tcl8.6 + 0x50fb7 (TclNRRunCallbacks + 0x47)
+	0x7486274527df: tcl8.6 + 0x527df (TclEvalEx + 0x94f)
+	0x748627452ad6: tcl8.6 + 0x52ad6 (Tcl_EvalEx + 0x16)
+	0x748627452afd: tcl8.6 + 0x52afd (Tcl_Eval + 0x1d)
+	0x7486a0b82013: qsys_tcl_jni_bridge + 0x3013 (Java_com_altera_tcl_interpreter_NativeTclWrapper_eval1 + 0x76)
+	0x748681018607:
+	0x748681007d80:
+	0x748681007d80:
+	0x748681007ffd:
+	0x748681007ffd:
+	0x748681008042:
+	0x748681a666ec:
+	0x748681007ffd:
+	0x748681008042:
+	0x7486810004e7:
+	0x74869fe9ab62: jvm + 0x69ab62 (_ZN9JavaCalls11call_helperEP9JavaValueP12methodHandleP17JavaCallArgumentsP6Thread + 0xe32)
+	0x74869fe98173: jvm + 0x698173 (_ZN9JavaCalls12call_virtualEP9JavaValue11KlassHandleP6SymbolS4_P17JavaCallArgumentsP6Thread + 0x263)
+	0x74869fe98777: jvm + 0x698777 (_ZN9JavaCalls12call_virtualEP9JavaValue6Handle11KlassHandleP6SymbolS5_P6Thread + 0x57)
+	0x74869ff3c7dc: jvm + 0x73c7dc (_ZL12thread_entryP10JavaThreadP6Thread + 0x6c)
+	0x7486a02d8d87: jvm + 0xad8d87 (_ZN10JavaThread17thread_main_innerEv + 0x1c7)
+	0x7486a02da13a: jvm + 0xada13a (_ZN10JavaThread3runEv + 0x2fa)
+	0x7486a0166a92: jvm + 0x966a92 (_ZL10java_startP6Thread + 0x102)
+	0x7486a0c94ac3: c + 0x94ac3
+	0x7486a0d26850: c + 0x126850
+</callstack>
+	<error>*** Fatal Error: ERROR: Refclk frequency and outclk frequencies must be greater than zero.</error>
+	<date>Tue Sep 24 16:27:18 2024
+</date>
+	<version>Version 22.4.0 Build 94 12/07/2022 SC Pro Edition</version>
+</internal_error>

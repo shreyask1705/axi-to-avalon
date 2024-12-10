@@ -1,0 +1,6 @@
+	component res is
+		port (
+			ninit_done : out std_logic   -- reset
+		);
+	end component res;
+

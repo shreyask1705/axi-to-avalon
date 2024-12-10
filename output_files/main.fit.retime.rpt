@@ -1,0 +1,137 @@
+Fitter Retime Stage Report for main
+Thu Oct 10 10:07:43 2024
+Quartus Prime Version 22.4.0 Build 94 12/07/2022 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Hyper-Retimer Settings
+  3. Reset Sequence Requirement
+  4. Retiming Limit Summary
+  5. Clock Domain u0|emif_fm_0_core_usr_clk (Meets timing requirements: No further analysis performed.)
+  6. Transfer from u0|emif_fm_0_phy_clk_l_0 to u0|emif_fm_0_core_usr_clk (Meets timing requirements: No further analysis performed.)
+  7. Transfer from u0|emif_fm_0_core_usr_clk to u0|emif_fm_0_phy_clk_l_0 (Meets timing requirements: No further analysis performed.)
+  8. Clock Domain altera_reserved_tck (Meets timing requirements: No further analysis performed.)
+  9. Transfer from u0|emif_fm_0_core_usr_clk to u0|emif_fm_0_phy_clk_0 (Meets timing requirements: No further analysis performed.)
+ 10. Transfer from u0|emif_fm_0_phy_clk_0 to u0|emif_fm_0_core_usr_clk (Meets timing requirements: No further analysis performed.)
+ 11. Retime Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------+
+; Hyper-Retimer Settings                           ;
++------------------------+---------+---------------+
+; Option                 ; Setting ; Default Value ;
++------------------------+---------+---------------+
+; Enable Auto-Pipelining ; On      ; On            ;
++------------------------+---------+---------------+
+
+
++---------------------------------------------------------+
+; Reset Sequence Requirement                              ;
++---------------------------+-----------------------------+
+; Clock Name                ; Number of additional cycles ;
++---------------------------+-----------------------------+
+; u0|emif_fm_0_ref_clock    ; 0                           ;
+; u0|emif_fm_0_vco_clk      ; 0                           ;
+; u0|emif_fm_0_vco_clk_1    ; 0                           ;
+; u0|emif_fm_0_core_usr_clk ; 0                           ;
+; u0|emif_fm_0_phy_clk_0    ; 0                           ;
+; u0|emif_fm_0_phy_clk_1    ; 0                           ;
+; u0|emif_fm_0_phy_clk_l_0  ; 0                           ;
+; u0|emif_fm_0_phy_clk_l_1  ; 0                           ;
+; u0|emif_fm_0_wf_clk_0     ; 0                           ;
+; u0|emif_fm_0_wf_clk_1     ; 0                           ;
+; u0|emif_fm_0_wf_clk_2     ; 0                           ;
+; u0|emif_fm_0_wf_clk_3     ; 0                           ;
+; u0|emif_fm_0_wf_clk_4     ; 0                           ;
+; mem_dqs[0]_IN             ; 0                           ;
+; mem_dqs[1]_IN             ; 0                           ;
+; internal_clk              ; 0                           ;
+; altera_reserved_tck       ; 0                           ;
++---------------------------+-----------------------------+
+Note: Due to retiming optimizations, a clock domain may require a longer reset sequence to ensure correct functionality.  The table above indicates the minimum number of additional reset sequence cycles needed for each clock domain.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Retiming Limit Summary                                                                                                                           ;
++---------------------------------------------------------------------+-----------------------------------------------------------+----------------+
+; Clock Transfer                                                      ; Limiting Reason                                           ; Recommendation ;
++---------------------------------------------------------------------+-----------------------------------------------------------+----------------+
+; Clock Domain u0|emif_fm_0_core_usr_clk                              ; Meets timing requirements: No further analysis performed. ; None           ;
+; Transfer from u0|emif_fm_0_phy_clk_l_0 to u0|emif_fm_0_core_usr_clk ; Meets timing requirements: No further analysis performed. ; None           ;
+; Transfer from u0|emif_fm_0_core_usr_clk to u0|emif_fm_0_phy_clk_l_0 ; Meets timing requirements: No further analysis performed. ; None           ;
+; Clock Domain altera_reserved_tck                                    ; Meets timing requirements: No further analysis performed. ; None           ;
+; Transfer from u0|emif_fm_0_core_usr_clk to u0|emif_fm_0_phy_clk_0   ; Meets timing requirements: No further analysis performed. ; None           ;
+; Transfer from u0|emif_fm_0_phy_clk_0 to u0|emif_fm_0_core_usr_clk   ; Meets timing requirements: No further analysis performed. ; None           ;
++---------------------------------------------------------------------+-----------------------------------------------------------+----------------+
+
+
+Clock Domain u0|emif_fm_0_core_usr_clk (Meets timing requirements: No further analysis performed.)
+===============================================================================
+
+
+Transfer from u0|emif_fm_0_phy_clk_l_0 to u0|emif_fm_0_core_usr_clk (Meets timing requirements: No further analysis performed.)
+===============================================================================
+
+
+Transfer from u0|emif_fm_0_core_usr_clk to u0|emif_fm_0_phy_clk_l_0 (Meets timing requirements: No further analysis performed.)
+===============================================================================
+
+
+Clock Domain altera_reserved_tck (Meets timing requirements: No further analysis performed.)
+===============================================================================
+
+
+Transfer from u0|emif_fm_0_core_usr_clk to u0|emif_fm_0_phy_clk_0 (Meets timing requirements: No further analysis performed.)
+===============================================================================
+
+
+Transfer from u0|emif_fm_0_phy_clk_0 to u0|emif_fm_0_core_usr_clk (Meets timing requirements: No further analysis performed.)
+===============================================================================
+
+
++-----------------+
+; Retime Messages ;
++-----------------+
+Info (20030): Parallel compilation is enabled and will use 24 of the 40 processors detected
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 22.4.0 Build 94 12/07/2022 SC Pro Edition
+    Info: Processing started: Thu Oct 10 09:52:00 2024
+    Info: System process ID: 3601936
+Info: Command: quartus_fit --read_settings_files=on --write_settings_files=off axi_to_avalon -c main
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = axi_to_avalon
+Info: Revision = main
+Info (17966): Starting Hyper-Retimer operations.
+Info (18914): The Hyper-Retimer was unable to optimize the design due to retiming restrictions. Run Fast Forward Timing Closure Recommendations to see step-by-step suggestions for design changes and show the estimated performance improvement from making these changes.
+Info (17968): Completed Hyper-Retimer operations.
+Info (18821): Fitter Hyper-Retimer operations ending: elapsed time is 00:00:06
+Info: Constraints on the CDC paths between acquisition clock and communication clock are created in the Signal Tap instance, auto_fab_0|alt_sld_fab_0|alt_sld_fab_0|auto_signaltap_auto_signaltap_0
+Info: The clock period of 'altera_reserved_tck' used in the Signal Tap instance, auto_fab_0|alt_sld_fab_0|alt_sld_fab_0|auto_signaltap_auto_signaltap_0 is not defined, setting max delay to 30ns (default 33MHz tck)
+Info: Adding default timing constraints to JTAG signals.  This will help to achieve basic functionality since no such constraints were provided by the user.
+
+

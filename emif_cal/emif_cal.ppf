@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="emif_cal_0"
+ megafunction_name="ALTERA_EMIF_CAL"
+ intended_family="Agilex"
+ specifies="all_ports">
+ <global>
+  <pin name="calbus_read_0" direction="output" scope="external" />
+  <pin name="calbus_write_0" direction="output" scope="external" />
+  <pin name="calbus_address_0[19..0]" direction="output" scope="external" />
+  <pin name="calbus_wdata_0[31..0]" direction="output" scope="external" />
+  <pin name="calbus_rdata_0[31..0]" direction="input" scope="external" />
+  <pin
+     name="calbus_seq_param_tbl_0[4095..0]"
+     direction="input"
+     scope="external" />
+  <pin name="calbus_clk" direction="output" scope="external" />
+ </global>
+</pinplan>

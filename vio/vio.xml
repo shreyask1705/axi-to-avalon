@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2024.09.29.10:56:26"
+ outputDirectory="/media/bluefalcon/Shreyas/axi_to_avalon/vio/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGFB027R24C2E2VR2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_SOURCE_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_SOURCE_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_SOURCE_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="sources" kind="conduit" start="0">
+   <property name="associatedClock" value="source_clk" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="source" direction="output" role="source" width="3" />
+  </interface>
+  <interface name="source_clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="source_clk" direction="input" role="clk" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="vio" version="1.0" name="vio">
+  <parameter name="AUTO_SOURCE_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_SOURCE_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_SOURCE_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGFB027R24C2E2VR2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/vio/synth/vio.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/vio/synth/vio.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="/media/bluefalcon/Shreyas/axi_to_avalon/vio.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/home/bluefalcon/Quartus_prime_pro/ip/altera/sld/jtag/altera_in_system_sources_probes/altera_in_system_sources_probes_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="vio">"Generating: vio"</message>
+   <message level="Info" culprit="vio">"Generating: altsource_probe_top"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_in_system_sources_probes"
+   version="19.2.1"
+   name="altsource_probe_top">
+  <parameter name="create_source_clock" value="true" />
+  <parameter name="instance_id" value="NONE" />
+  <parameter name="source_initial_value" value="0" />
+  <parameter name="sld_auto_instance_index" value="YES" />
+  <parameter name="sld_instance_index" value="0" />
+  <parameter name="probe_width" value="0" />
+  <parameter name="source_width" value="3" />
+  <parameter name="create_source_clock_enable" value="false" />
+  <parameter name="device_family" value="Agilex" />
+  <parameter name="enable_metastability" value="YES" />
+  <parameter name="gui_use_auto_index" value="true" />
+  <generatedFiles>
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/vio/altera_in_system_sources_probes_1921/synth/altsource_probe_top.v"
+       attributes="" />
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/vio/altera_in_system_sources_probes_1921/synth/altera_in_system_sources_probes.sdc"
+       attributes="NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/vio/altera_in_system_sources_probes_1921/synth/altsource_probe_top.v"
+       attributes="" />
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/vio/altera_in_system_sources_probes_1921/synth/altera_in_system_sources_probes.sdc"
+       attributes="NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/home/bluefalcon/Quartus_prime_pro/ip/altera/sld/jtag/altera_in_system_sources_probes/altera_in_system_sources_probes_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="vio" as="in_system_sources_probes_0" />
+  <messages>
+   <message level="Info" culprit="vio">"Generating: altsource_probe_top"</message>
+  </messages>
+ </entity>
+</deploy>

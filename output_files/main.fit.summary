@@ -1,0 +1,17 @@
+Fitter Status : Successful - Thu Oct 10 10:09:49 2024
+Quartus Prime Version : 22.4.0 Build 94 12/07/2022 SC Pro Edition
+Revision Name : main
+Top-level Entity Name : main
+Family : Agilex
+Device : AGFB027R24C2E2VR2
+Timing Models : Preliminary
+Power Models : Preliminary
+Device Status : Preliminary
+Logic utilization (in ALMs) : 5,573 / 912,800 ( < 1 % )
+Total dedicated logic registers : 13323
+Total pins : 56 / 912 ( 6 % )
+Total block memory bits : 5,652,480 / 271,810,560 ( 2 % )
+Total RAM Blocks : 280 / 13,272 ( 2 % )
+Total DSP Blocks : 0 / 8,528 ( 0 % )
+Total HSSI HPS : 0 / 1 ( 0 % )
+Total PLLs : 2 / 36 ( 6 % )

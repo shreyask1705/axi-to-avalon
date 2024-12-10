@@ -1,0 +1,29 @@
+
+State Machine - Summary
+
+State Machine - u0|emif_fm_0|arch|arch_inst|local_reset_inst|non_hps.state
+Name non_hps.state.WAIT_USER_RESET_REQ_2ND_DEASSERT non_hps.state.WAIT_USER_RESET_REQ_ASSERT non_hps.state.WAIT_USER_RESET_REQ_1ST_DEASSERT non_hps.state.WAIT_RESET_DONE non_hps.state.ASSERT_CORE2SEQ_RESET_REQ 
+non_hps.state.WAIT_RESET_DONE 0 0 0 0 0 
+non_hps.state.WAIT_USER_RESET_REQ_1ST_DEASSERT 0 0 1 1 0 
+non_hps.state.WAIT_USER_RESET_REQ_ASSERT 0 1 0 1 0 
+non_hps.state.WAIT_USER_RESET_REQ_2ND_DEASSERT 1 0 0 1 0 
+non_hps.state.ASSERT_CORE2SEQ_RESET_REQ 0 0 0 1 1 
+
+State Machine - u0|emif_fm_0|arch|arch_inst|cal_counter_inst|non_hps.counter_state
+Name non_hps.counter_state.COUNT_CAL non_hps.counter_state.IDLE non_hps.counter_state.STOP non_hps.counter_state.INIT 
+non_hps.counter_state.INIT 0 0 0 0 
+non_hps.counter_state.STOP 0 0 1 1 
+non_hps.counter_state.IDLE 0 1 0 1 
+non_hps.counter_state.COUNT_CAL 1 0 0 1 
+
+State Machine - dut|state
+Name state.RESET state.READ state.WRITE 
+state.RESET 0 0 0 
+state.READ 1 1 0 
+state.WRITE 1 0 1 
+
+State Machine - dut|next_state
+Name next_state.RESET next_state.READ next_state.WRITE 
+next_state.RESET 0 0 0 
+next_state.READ 1 1 0 
+next_state.WRITE 1 0 1 

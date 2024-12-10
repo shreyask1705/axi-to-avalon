@@ -1,0 +1,86 @@
+Fitter Finalize Stage Report for main
+Thu Oct 10 10:09:21 2024
+Quartus Prime Version 22.4.0 Build 94 12/07/2022 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Routing Usage Summary
+  3. Finalize Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------+
+; Routing Usage Summary                                       ;
++-----------------------------+-------------------------------+
+; Routing Resource Type       ; Usage                         ;
++-----------------------------+-------------------------------+
+; Block Input Mux Wrapbacks   ; 1 / 964,320 ( < 1 % )         ;
+; Block Input Muxes           ; 42,459 / 10,561,600 ( < 1 % ) ;
+; Block interconnects         ; 35,078 / 12,385,280 ( < 1 % ) ;
+; C1 interconnects            ; 18,524 / 5,173,760 ( < 1 % )  ;
+; C4 interconnects            ; 7,013 / 4,933,120 ( < 1 % )   ;
+; C8 interconnects            ; 56 / 493,312 ( < 1 % )        ;
+; DCM_muxes                   ; 1 / 1,152 ( < 1 % )           ;
+; DELAY_CHAINs                ; 10 / 32,048 ( < 1 % )         ;
+; Direct links                ; 7,699 / 12,385,280 ( < 1 % )  ;
+; HIO Buffers                 ; 0 / 73,472 ( 0 % )            ;
+; Programmable Invert Buffers ; 10 / 560 ( 2 % )              ;
+; Programmable Invert Inputs  ; 2,051 / 932,160 ( < 1 % )     ;
+; Programmable Inverts        ; 2,051 / 932,160 ( < 1 % )     ;
+; R0 interconnects            ; 18,714 / 8,632,960 ( < 1 % )  ;
+; R1 interconnects            ; 12,848 / 4,933,120 ( < 1 % )  ;
+; R12 interconnects           ; 95 / 739,968 ( < 1 % )        ;
+; R2 interconnects            ; 3,969 / 2,473,120 ( < 1 % )   ;
+; R4 interconnects            ; 3,484 / 2,486,240 ( < 1 % )   ;
+; R6 interconnects            ; 5,327 / 2,492,800 ( < 1 % )   ;
+; Redundancy Muxes            ; 2 / 145,648 ( < 1 % )         ;
+; Row Clock Tap-Offs          ; 1,817 / 739,968 ( < 1 % )     ;
+; Switchbox_clock_muxes       ; 52 / 23,040 ( < 1 % )         ;
+; VIO Buffers                 ; 138 / 22,400 ( < 1 % )        ;
+; Vertical_seam_tap_muxes     ; 47 / 12,288 ( < 1 % )         ;
++-----------------------------+-------------------------------+
+
+
++-------------------+
+; Finalize Messages ;
++-------------------+
+Info (20030): Parallel compilation is enabled and will use 24 of the 40 processors detected
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 22.4.0 Build 94 12/07/2022 SC Pro Edition
+    Info: Processing started: Thu Oct 10 09:52:00 2024
+    Info: System process ID: 3601936
+Info: Command: quartus_fit --read_settings_files=on --write_settings_files=off axi_to_avalon -c main
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = axi_to_avalon
+Info: Revision = main
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (18258): Fitter Physical Synthesis operations beginning
+Info (18259): Fitter Physical Synthesis operations ending: elapsed time is 00:00:04
+Info (16557): Fitter post-fit operations ending: elapsed time is 00:01:37
+
+

@@ -1,0 +1,123 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'u0|emif_fm_0_core_usr_clk'
+Slack : 0.787
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Setup 'u0|emif_fm_0_phy_clk_l_0'
+Slack : 1.229
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Setup 'u0|emif_fm_0_phy_clk_0'
+Slack : 3.517
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Hold 'u0|emif_fm_0_core_usr_clk'
+Slack : 0.038
+TNS   : 0.000
+Corner: Fast vid2 100C Model
+
+Type  : Hold 'u0|emif_fm_0_phy_clk_0'
+Slack : 0.262
+TNS   : 0.000
+Corner: Fast vid2a 0C Model
+
+Type  : Hold 'u0|emif_fm_0_phy_clk_l_0'
+Slack : 0.310
+TNS   : 0.000
+Corner: Fast vid2a 0C Model
+
+Type  : Recovery 'u0|emif_fm_0_core_usr_clk'
+Slack : 1.318
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Removal 'u0|emif_fm_0_core_usr_clk'
+Slack : 0.707
+TNS   : 0.000
+Corner: Fast vid2a 0C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_vco_clk_1'
+Slack : 0.132
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_vco_clk'
+Slack : 0.133
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_wf_clk_3'
+Slack : 0.189
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_wf_clk_1'
+Slack : 0.190
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_wf_clk_2'
+Slack : 0.190
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_wf_clk_4'
+Slack : 0.190
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_wf_clk_0'
+Slack : 0.191
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'mem_dqs[0]_IN'
+Slack : 0.249
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'mem_dqs[1]_IN'
+Slack : 0.249
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_phy_clk_0'
+Slack : 0.482
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_phy_clk_1'
+Slack : 0.555
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_core_usr_clk'
+Slack : 0.975
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_ref_clock'
+Slack : 1.039
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'u0|emif_fm_0_phy_clk_l_0'
+Slack : 1.324
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'internal_clk'
+Slack : 2.346
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+------------------------------------------------------------
+Info: see the "DDR report" for DDR timing results
+------------------------------------------------------------
+------------------------------------------------------------

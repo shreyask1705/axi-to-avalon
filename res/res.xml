@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2024.10.08.15:23:50"
+ outputDirectory="/media/bluefalcon/Shreyas/axi_to_avalon/res/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGFB027R24C2E2VR2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="ninit_done" kind="reset" start="1">
+   <property name="associatedClock" value="" />
+   <property name="associatedDirectReset" value="" />
+   <property name="associatedResetSinks" value="none" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="ninit_done" direction="output" role="reset" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="res" version="1.0" name="res">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGFB027R24C2E2VR2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/res/synth/res.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/res/synth/res.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="/media/bluefalcon/Shreyas/axi_to_avalon/res.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/home/bluefalcon/Quartus_prime_pro/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="res">"Generating: res"</message>
+   <message level="Info" culprit="res">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="s10_user_rst_clkgate_0">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_s10_user_rst_clkgate"
+   version="19.4.1"
+   name="altera_s10_user_rst_clkgate">
+  <parameter name="DEVICE_FAMILY" value="Agilex" />
+  <parameter name="outputType" value="Reset Interface" />
+  <generatedFiles>
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/res/altera_s10_user_rst_clkgate_1941/synth/altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/res/altera_s10_user_rst_clkgate_1941/synth/altera_s10_user_rst_clkgate_fm.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/res/altera_s10_user_rst_clkgate_1941/synth/altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/media/bluefalcon/Shreyas/axi_to_avalon/res/altera_s10_user_rst_clkgate_1941/synth/altera_s10_user_rst_clkgate_fm.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/home/bluefalcon/Quartus_prime_pro/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="res" as="s10_user_rst_clkgate_0" />
+  <messages>
+   <message level="Info" culprit="res">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="s10_user_rst_clkgate_0">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+</deploy>
